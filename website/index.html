@@ -1,1 +1,48 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tooth Decay Predictor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tooth Decay Predictor</h1>
+    </header>
+    <main>
+      <h2>Welcome to the Tooth Decay Predictor</h2>
+      <p>
+        Enter your information below to receive an estimate of your likelihood
+        of developing tooth decay:
+      </p>
+      <form>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" />
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <label for="brushing-frequency">Brushing Frequency:</label>
+        <select id="brushing-frequency" name="brushing-frequency">
+          <option value="less-than-twice-a-day">Less than twice a day</option>
+          <option value="twice-a-day">Twice a day</option>
+          <option value="more-than-twice-a-day">More than twice a day</option>
+        </select>
+        <label for="sugary-drink-frequency">Sugary Drink Frequency:</label>
+        <select id="sugary-drink-frequency" name="sugary-drink-frequency">
+          <option value="never">Never</option>
+          <option value="rarely">Rarely</option>
+          <option value="sometimes">Sometimes</option>
+          <option value="often">Often</option>
+        </select>
+        <button type="button" id="predict-button">Predict</button>
+      </form>
+      <div id="prediction-results"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
