@@ -1,48 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Tooth Decay Predictor</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1>Tooth Decay Predictor</h1>
-      <p>Fill out the form below to get a prediction of your likelihood of tooth decay.</p>
-      <form>
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required><br>
+<html>
 
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender" required>
-          <option value="">Select gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select><br>
+<head>
+  <meta charset="UTF-8">
+  <title>Tooth Decay Predictor</title>
+  <style>
+    /* Style for the menu bar */
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .active {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
 
-        <label for="cavities">Number of cavities in the last year:</label>
-        <input type="number" id="cavities" name="cavities" required><br>
+<body>
+  <!-- Menu bar -->
+  <div class="navbar">
+    <a class="active" href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
 
-        <label for="brushingFrequency">Brushing Frequency (per day):</label>
-        <input type="number" id="brushingFrequency" name="brushingFrequency" required><br>
+  <!-- Main content -->
+  <div style="padding: 20px">
+    <h1>Tooth Decay Predictor</h1>
+    <p>Please enter the following information:</p>
+    <form>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required><br><br>
 
-        <label for="sugaryDrinks">Sugary Drink Frequency (per week):</label>
-        <input type="number" id="sugaryDrinks" name="sugaryDrinks" required><br>
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">Please select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select><br><br>
 
-        <button type="button" id="predictButton" onclick="predict()">Predict</button>
-      </form>
+      <label for="brushing-frequency">Brushing frequency:</label>
+      <select id="brushing-frequency" name="brushing-frequency" required>
+        <option value="">Please select</option>
+        <option value="1">Less than once a day</option>
+        <option value="2">Once a day</option>
+        <option value="3">Twice a day</option>
+        <option value="4">More than twice a day</option>
+      </select><br><br>
+
+      <label for="sugary-drink-frequency">Sugary drink frequency:</label>
+      <select id="sugary-drink-frequency" name="sugary-drink-frequency" required>
+        <option value="">Please select</option>
+        <option value="1">Less than once a week</option>
+        <option value="2">Once a week</option>
+        <option value="3">Twice a week</option>
+        <option value="4">More than twice a week</option>
+      </select><br><br>
+
+      <input type="button" value="Predict" onclick="predictOutcome()"><br><br>
 
       <div id="result"></div>
-    </main>
-    <script src="js/script.js"></script>
-  </body>
-</html>
+    </form>
+  </div>
+
+  <script>
+    function predictOutcome() {
+      var age = document.getElementById("age").value;
+      var gender = document.getElementById("gender").value;
+      var brushingFrequency = document.getElementById("brushing-frequency").value;
+      var sugaryDrinkFrequency = document.getElementById("sugary-drink-frequency").value;
+
+      // Perform prediction here using the input values
+
+      // Randomly assign outcome and category for
