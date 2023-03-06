@@ -88,3 +88,18 @@ button:hover {
   text-align: center;
   margin-top: 20px;
 }
+
+function predict() {
+  const age = document.getElementById("age").value;
+  const gender = document.getElementById("gender").value;
+  const cavities = document.getElementById("cavities").value;
+  const brushingFrequency = document.getElementById("brushingFrequency").value;
+  const sugaryDrinks = document.getElementById("sugaryDrinks").value;
+
+  // Prediction code goes here
+  // ...
+
+  // Display result
+  const resultElement = document.getElementById("result");
+  resultElement.innerHTML = `The predicted likelihood of tooth decay is ${predictedValue}.`;
+}
